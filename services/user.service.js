@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 
 
 exports.signupUser = (userData) => {
+    console.log(userData);
     return new Promise((resolve, reject) => {
         User.findByEmail(userData.email).then((user, err) => {
             if(err) {
@@ -21,10 +22,10 @@ exports.signupUser = (userData) => {
                     if(err) {
                         reject(err)
                     }
-                   
-                    var salt = bcrypt.genSaltSync(10);
-                    const hashedPassword = bcrypt.hashSync(user.password, salt)
-                    user.password = hashedPassword;
+                    
+                    // var salt = bcrypt.genSaltSync(10);
+                    // const hashedPassword = bcrypt.hashSync(user.password, salt)
+                    // user.password = hashedPassword;
         
                     user.save((error, updatedUser) => {
                         if(error) return reject(error);

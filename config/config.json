@@ -1,3 +1,3 @@
 {
-    "dburl": "mongodb://127.0.0.1:27017/IRIS"
+    "dburl":"mongodb+srv://riteshmongo:ritesh74@ritesh-database.v3dencm.mongodb.net/?retryWrites=true&w=majority" 
 }

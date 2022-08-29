@@ -18,20 +18,20 @@ router.post('/', (req, res) => {
         })
 });
 
-router.post('/login', (req, res) => {
-    userService.loginUser(req.body).then(user => {
-        res.status(200).send(user);
-    }).catch(error => {
-        res.status(500).send(error);
-    })
-})
-router.post('/unsubscribe', (req, res) => {
-    userService.unsubscribeUser(req.body).then(user => {
-        res.status(200).send(user);
-    }).catch(err => {
-        res.status(500).send(err);
-    })
-})
+// router.post('/login', (req, res) => {
+//     userService.loginUser(req.body).then(user => {
+//         res.status(200).send(user);
+//     }).catch(error => {
+//         res.status(500).send(error);
+//     })
+// })
+// router.post('/unsubscribe', (req, res) => {
+//     userService.unsubscribeUser(req.body).then(user => {
+//         res.status(200).send(user);
+//     }).catch(err => {
+//         res.status(500).send(err);
+//     })
+// })
     
     
 

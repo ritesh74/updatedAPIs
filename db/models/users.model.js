@@ -10,13 +10,11 @@ const userSchema = new Schema({
     lastName: String,
     email: String,
     password: String,
-    permissionLevel: Number,
-    phone_no: String,
     date: Date,
 });
 
 
-const User = mongoose.model('Users', userSchema, 'users');
+const User = mongoose.model('Users', userSchema);
 
 
 User.findByEmail = (email) => {

@@ -11,7 +11,7 @@ const options = {
     // If not connected, return errors immediately rather than waiting for reconnect
     bufferMaxEntries: 0,
     useNewUrlParser: true,
-    useUnifiedTopology: true 
+    useUnifiedTopology: true
 };
 
 
@@ -28,4 +28,16 @@ const mongoConnection = () => {
         })
     }
 mongoConnection();
+
+
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+
+// nconf.argv().env();
+// nconf.file('dburl', {file: './config/config.json'})
+// const client = new MongoClient(nconf.get('dburl'), { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 exports.mongoose = mongoose;

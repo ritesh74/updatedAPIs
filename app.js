@@ -7,6 +7,10 @@ const db = require('./db/db');
 const userRoute = require('./routes/users/users.route');
 app.use('/users',userRoute);
 
+app.get('/user', (req, res) => {
+  res.send("hello working");
+});
+
 // body parser
 app.use(bodyParser.json());
 
